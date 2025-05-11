@@ -1,0 +1,76 @@
+.container {
+   margin-top: 200px;
+   margin-left: 700px;
+}
+.register-container {
+    width: 350px;
+    margin: 50px;
+    padding: 25px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(red, green, blue, alpha);
+    border: 1px solid rgb(5, 4, 4);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+ }
+
+ h2 {
+    color: #111;
+    margin-bottom: 10px;
+    text-align: center;
+ }
+
+ .input_group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: 0.3s;
+ }
+
+ .input_group:hover {
+    border-color: black;
+ }
+
+ .input_group .icon {
+    font-size: 24px;
+    color: #111;
+    margin-right: 10px;
+ }
+
+ .input_group input {
+    width: 100%;
+    border: 1px solid black;
+    outline: none;
+    background: none;
+ }
+
+ .register-button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background: #0d0f11;
+    border: 1px solid red;
+}
+
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+ 

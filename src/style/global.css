@@ -1,0 +1,406 @@
+/* Header Styling */
+.header {
+  background-image: linear-gradient(600deg, #232123, #605e5d, #1e121f, #010406);
+  padding: 15px 0;
+  color: rgb(43, 39, 39);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  animation: slideDown 0.8s ease-in-out;
+}
+
+.header-container {
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-icon {
+  font-size: 5rem;
+  margin-right: 0.5rem;
+  color: #f1edf4;
+}
+
+.logo {
+  display: flex;
+  margin-right: 700px;
+  color: #fcf9f6;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 20px;
+  padding: 0;
+}
+
+.nav-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlide 0.5s ease-in-out forwards;
+}
+
+.nav-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.nav-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.nav-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.nav-item:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.nav-item:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.nav-item:nth-child(6) {
+  animation-delay: 0.7s;
+}
+.nav-item:nth-child(7) {
+  animation-delay: 0.8s;
+}
+.nav-item:nth-child(8) {
+  animation-delay: 0.9s;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #f2f0ef;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #f3f0ee;
+}
+
+.nav-link:hover {
+  background: black;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.nav-link-btn {
+  padding: 20px;
+  color: #fff;
+  background-color: #050506;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link-btn:hover {
+  background-color: #1d6798;
+  border: 1px solid red;
+}
+
+.dropdown {
+  margin-top: 10px;
+  padding: 15px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown .nav-link {
+  color: #333;
+  background-color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown .nav-link:hover {
+  background-color: #f1f1f1;
+  color: #2980b9;
+}
+
+ @media (max-width: 1024px) {
+  .header-container {
+    padding: 0 10px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .nav-link-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-item {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .nav-link-btn {
+    padding: 0.7rem 1.5rem;
+    width: 100%;
+  }
+
+  .dropdown {
+    width: 100%;
+    top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+
+  .nav-link-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .header-container {
+    padding: 0 15px;
+  }
+}
+
+ @keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+ 
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Login Container */
+.login-container {
+  margin-top: 200px;
+  margin-left: 700px;
+   background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #5c6bc0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #4e5b91;
+}
+
+/* Link */
+p {
+  text-align: center;
+  margin-top: 15px;
+  color: #555;
+}
+
+a {
+  color: #5c6bc0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .login-container {
+      padding: 20px;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  input {
+      padding: 8px;
+  }
+
+  button {
+      padding: 10px;
+      font-size: 1rem;
+  }
+}
+
